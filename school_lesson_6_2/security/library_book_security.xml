@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="1">
+    <data>
 
         <record id="library_book_rule_user" model="ir.rule">
             <field name="name">Library users can only view own books</field>
@@ -12,6 +12,18 @@
             <field name="perm_create" eval="False"/>
             <field name="perm_unlink" eval="False"/>
         </record>
+
+        <record id="record_rule_library_author_restrict_access" model="ir.rule">
+            <field name="name">Restrict access to library authors for trainees</field>
+            <field name="model_id" ref="model_library_author"/>
+<!--            <field name="domain_force" eval="[('create_date', '>=', env['library.author'].search([]).get_restrict_date())]"/>-->
+            <field name="groups" eval="[(4, ref('group_library_trainee'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
 
         <record id="library_book_rule_admin" model="ir.rule">
             <field name="name">Library administrators have full rights on books</field>

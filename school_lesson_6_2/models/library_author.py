@@ -8,10 +8,10 @@ class LibraryAuthor(models.Model):
     first_name = fields.Char(required=True)
     last_name = fields.Char(required=True)
     birth_date = fields.Date('Birthday')
+    create_date = fields.Datetime('Creation Date', readonly=True)
 
     def name_get(self):
-        return [(rec.id, "%s %s" % (
-            rec.first_name, rec.last_name)) for rec in self]
+        return [(rec.id, "%s %s" % (rec.first_name, rec.last_name)) for rec in self]
 
     def action_delete(self):
         self.ensure_one()
