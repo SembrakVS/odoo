@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="book_category_fantasy_roman" model='library.book.category'>
+        <field name="name">Fantasy roman</field>
+    </record>
+    <record id="book_category_an_adventure_novel" model='library.book.category'>
+        <field name="name">An adventure novel</field>
+    </record>
+    <record id="book_category_novel_in_verse" model='library.book.category'>
+        <field name="name">Novel in verse</field>
+    </record>
+</odoo>

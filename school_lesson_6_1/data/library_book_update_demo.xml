@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Зміна назви у демо запису "Поклик предків" -->
+    <record id="demo_book_2_change_name" model="library.book">
+        <field name="name">New Name for Demo Book</field>
+        <field name="category_id" ref="book_category_an_adventure_novel"/>
+    </record>
+
+    <!-- Видалення демо запису "Двадцять тисяч льє під водою" -->
+    <record id="demo_book_3_delete" model="library.book">
+        <field name="active" eval="False"/>
+    </record>
+
+<!--    <delete id="book_3" model="library.book"/>-->
+</odoo>
