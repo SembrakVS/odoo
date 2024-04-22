@@ -13,6 +13,9 @@ class LibraryBook(models.Model):
                               default=lambda self: self.env.ref('base.user_demo').id
                               if self.env.ref('base.user_demo') else False)
     active = fields.Boolean(default=True)
+    category_id = fields.Many2one(
+        comodel_name='library.book.category'
+    )
 
     @api.onchange('reader_id')
     def _onchange_reader_id(self):

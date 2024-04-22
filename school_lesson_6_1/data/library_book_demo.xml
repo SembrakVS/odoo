@@ -3,7 +3,7 @@
 
     <record id="book_1" model="library.book">
         <field name="name">Маруся Чурай</field>
-        <field name="category_id" ref="book_category_action"/>
+        <field name="category_id" ref="book_category_fantasy_roman"/>
     </record>
     <record id="book_2" model="library.book">
         <field name="name">Поклик предків</field>
