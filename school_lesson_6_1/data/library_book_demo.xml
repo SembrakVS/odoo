@@ -11,7 +11,7 @@
     </record>
     <record id="book_3" model="library.book">
         <field name="name">Двадцять тисяч льє під водою</field>
-                <field name="category_id" ref="book_category_novel_in_verse"/>
+        <field name="category_id" ref="book_category_novel_in_verse"/>
     </record>
 
 </odoo>
